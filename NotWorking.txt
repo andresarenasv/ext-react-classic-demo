@@ -4,6 +4,5 @@
 4) Locked grids not working
 5) TreePanelGrid Headers are not appearing
 6) Dashboard, how can I define another ExtReact Component inside a Dashboard part
-7) How can we implement onBoxReady event -> load iFrame URL
-8) ExtGrid defined as React
-9) Storybook does not work
+7) ExtGrid defined as React
+8) Storybook does not work
