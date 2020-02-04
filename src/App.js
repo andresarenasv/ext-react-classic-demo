@@ -8,6 +8,7 @@ import Calendar from './components/calendar/Calendar';
 import TreeGrid from './components/tree/TreeGrid';
 import IFrame from './components/iFrame/IFrame';
 import GridReact from './components/gridReact/GridReact';
+import LatestIssues from './components/latestIssues/LatestIssues';
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
           }
         }}
       >
+        <LatestIssues/>
         <Panel/>
         <Grid/>
         <Form/>

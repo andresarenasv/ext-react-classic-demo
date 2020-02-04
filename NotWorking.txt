@@ -6,3 +6,21 @@
 6) Dashboard, how can I define another ExtReact Component inside a Dashboard part
 7) ExtGrid defined as React
 8) Storybook does not work
+
+
+
+
+9) you can no declare handlers of buttons inside toolbars -> CRITICAL
+10) you can not render pure html inside a panel or a container
+11) field triggers are not working
+
+triggers = {{
+				clean: {
+					hidden: true,
+					cls: 'x-fa fa-times',
+					handler: function(comp) {
+						comp.setValue(null);
+						comp.getTrigger('clean').hide();
+					}
+				}
+			}}
