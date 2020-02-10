@@ -1,0 +1,32 @@
+# built packages
+.sencha
+.scannerwork
+.vscode
+
+packages/remote/
+
+/build
+dist/
+bootstrap.*
+classic.json*
+modern.json*
+*.log
+
+node_modules
+
+# Eclipse workspace
+.metadata/
+
+# WebStorm workspace
+.idea/
+.project
+
+# shortcuts
+*.lnk
+
+# backups
+*.bak
+ext/packages/pivot/resources/fonts/
+test/lib/
+/deployment/config.json
+*.zip
