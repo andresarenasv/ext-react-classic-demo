@@ -18,7 +18,7 @@
 	there are only 3 records (look for the log -> Method renderSign has been called) and if you clean the console logs
 	and then close the window, the render method is being called 24 times. This is causing big slowness in more complex
 	views, we have a use case in which we have a view with a tab panel that have at least 8 grids and each grid have at least 8 columns
-	and each column have at least 4 renderers. Note: the render method should not be called, and this does not happen in modern
+	and each grid have at least 4 renderers. Note: the render method should not be called, and this does not happen in modern
 
 3) Browser is refreshing before the watch is finished (only happening in classic): In order to test this you need to start
 	the app, and then uncomment line. ./src/components/grid/Grid.js:105. You will see that the sencha app compile process start,
