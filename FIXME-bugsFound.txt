@@ -41,7 +41,7 @@
 	the grid and add the toolbar (it is working fine). Just run the app and you will see the result.
 
 5) Panel Split property not working: Please look for Panel definition at: ./src/components/grid/Grid.js:127. We have defined a panel
-	with the split property, but it is not showing in the UI
+	with the split property, but the splitter is not showing in the UI
 
 6) Window listeners are not getting fired: Please look at ./src/components/window/Window.js:53 we are trying to log in
 	console the show, boxready, afterrender events and we have tried different ways and none one is working. Question - are all the events
