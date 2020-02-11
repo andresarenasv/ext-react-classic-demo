@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ExtContainer } from '@sencha/ext-react-classic'
-import Main from './view/Main/Main'
+import Grid from './components/grid/Grid'
+import Card from './components/card/Card';
 
 // Enable responsiveConfig app-wide. You can remove this if you don't plan to build a responsive UI.
 Ext.require('Ext.plugin.Responsive');
@@ -40,7 +41,7 @@ export default class App extends Component {
         layout = 'fit'
         viewport = {true}
       >
-        <Main/>
+        <Card/>
       </ExtContainer>
     )
   }

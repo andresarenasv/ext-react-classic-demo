@@ -1,0 +1,9 @@
+1) field regex validation is not working: If you define following textfield and error is appearing upon input change (Uncaught TypeError: regex.test is not a function).
+	Please check -> component-manager/src/components/form/Form.js:44
+
+		<ExtTextfield
+		  fieldLabel = 'Phone Number'
+		  name = 'phone'
+		  allowBlank = {false}
+		  regex = {/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im}
+		/>
