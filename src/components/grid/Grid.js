@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ExtPanel, ExtGrid} from '@sencha/ext-react-classic';
+import {ExtPanel, ExtGrid, ExtToolbar, ExtButton} from '@sencha/ext-react-classic';
 import Window from '../window/Window';
 
 class Grid extends Component {
@@ -47,8 +47,10 @@ class Grid extends Component {
     let iValue = parseInt(value);
     let color = 'red';
 
+    console.count(`Method renderSign has been called`);
+
     if (iValue > 0) { color = 'green'; }
-    return `<span data-qtip = "Hola" style="color:${color};">${value}<i class="fa fa-camera-retro fa-lg"></i></span>`
+    return `<span style="color:${color};">${value}<i class="fa fa-camera-retro fa-lg"></i></span>`
   };
 
   /**
@@ -76,6 +78,7 @@ class Grid extends Component {
     const self = this;
     const {currentRecord} = self.state;
 
+    console.count(`Render Grid has been called`);
     return (
       <ExtPanel
         layout = 'border'
@@ -99,6 +102,7 @@ class Grid extends Component {
           columns={[
             {text: "name", dataIndex: "name"},
             {text: "email", dataIndex: "email", width: 200},
+            //{text: "Email 2", dataIndex: "email", width: 200},
             {
               xtype: 'actioncolumn',
               menuDisabled: true,
@@ -109,7 +113,21 @@ class Grid extends Component {
             {text: "% Change", dataIndex: "priceChangePct", align: "right", producesHTML: false, renderer: self.renderSign}
           ]}
         >
+          {/*<ExtToolbar
+            dock = 'top'
+          >
+            <ExtButton
+              text = 'test'
+            />
+          </ExtToolbar>*/}
         </ExtGrid>
+        <ExtPanel
+          title = 'Panel with split'
+          region = 'west'
+          split = {true}
+          collapsible = {true}
+          width = {300}
+        ></ExtPanel>
       </ExtPanel>
     )
   }

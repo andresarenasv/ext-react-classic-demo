@@ -32,6 +32,8 @@ const Window = props => {
 	// View
 	//-----------------------------------
 
+	console.count(`Render Window has been called`);
+
 	return (
 		<ExtWindow
 			title = 'Current record'
@@ -48,6 +50,22 @@ const Window = props => {
 			width = {350}
 			autoShow = {true}
 			onBeforedestroy = {props.onClose}
+			// Window listeners test
+			onShow = {() => {console.log('onShow')}}
+			show = {() => {console.log('show')}}
+			onshow = {() => {console.log('onshow')}}
+			onBoxready = {() => {console.log('onBoxready')}}
+			onboxready = {() => {console.log('onboxready')}}
+			boxready = {() => {console.log('boxready')}}
+			onBoxReady = {() => {console.log('onBoxReady')}}
+			afterrender = {() => {console.log('afterrender')}}
+			onAfterRender = {() => {console.log('onAfterRender')}}
+			onAfterrender = {() => {console.log('onAfterrender')}}
+			listeners = {{
+				show: () => {console.log('listeners-show')},
+				boxready: () => {console.log('listeners-boxready')},
+				afterrender: () => {console.log('listeners-afterrender')}
+			}}
 		>
 			<ExtForm
 				trackResetOnLoad = {true}
