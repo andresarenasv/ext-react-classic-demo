@@ -47,4 +47,6 @@
 	console the show, boxready, afterrender events and we have tried different ways and none one is working. Question - are all the events
 	of the components supported? is there any doc for ext react classic? Note - this is working in Modern
 
-7)
+---------------------------------------------------------------------------------------
+
+7) TextField onFocus and onBlur event is being fired twice: Please look for the

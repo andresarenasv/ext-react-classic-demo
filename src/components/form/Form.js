@@ -40,6 +40,8 @@ class Form extends Component {
           fieldLabel = 'Email'
           name = 'email'
           value = {params.email}
+          onBlur = {() => {console.count('onBlur ExtTextfield - email')}}
+          onFocus = {() => {console.count('onFocus ExtTextfield - email')}}
         />
         <ExtTextfield
           fieldLabel = 'Phone Number'
