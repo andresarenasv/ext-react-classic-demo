@@ -29,16 +29,6 @@
     "build"
   ],
   "env": {
-    "development": {
-      "plugins": [
-        "@sencha/ext-react-babel-plugin"
-      ]
-    },
-    "production": {
-      "plugins": [
-        "@sencha/ext-react-babel-plugin"
-      ]
-    },
     "test": {
       "presets": [
         "@babel/preset-env"

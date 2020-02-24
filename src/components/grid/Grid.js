@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ExtPanel, ExtGrid, ExtToolbar, ExtButton} from '@sencha/ext-react-classic';
+import {ExtPanel, ExtGrid, ExtContainer, ExtToolbar, ExtButton, ExtTbseparator} from '@sencha/ext-react-classic';
 import Window from '../window/Window';
 
 class Grid extends Component {
@@ -9,7 +9,8 @@ class Grid extends Component {
   //-----------------------------------
 
   state = {
-    currentRecord: undefined
+    currentRecord: undefined,
+    showEvenButtons: true 
   };
 
   //-----------------------------------
@@ -49,6 +50,9 @@ class Grid extends Component {
 
     console.count(`Method renderSign has been called`);
 
+    // BUG #8: Grid Cell Renderer does not display tooltips
+    context.tdAttr = 'data-qtip="This should display a tooltip in the grid\'s cell"';
+
     if (iValue > 0) { color = 'green'; }
     return `<span style="color:${color};">${value}<i class="fa fa-camera-retro fa-lg"></i></span>`
   };
@@ -76,7 +80,7 @@ class Grid extends Component {
    */
   render() {
     const self = this;
-    const {currentRecord} = self.state;
+    const { currentRecord, showEvenButtons } = self.state;
 
     console.count(`Render Grid has been called`);
     return (
@@ -88,45 +92,75 @@ class Grid extends Component {
           currentRecord = {currentRecord}
           onClose = {self.onCloseWindow}
         />}
-        <ExtGrid
-          title = "The Grid"
-          region = 'center'
-          store = { this.store }
-          plugins = {'gridfilters'}
-          onRowdblclick = {self.props.onRowDblClick}
-          viewConfig = {{
-            markDirty: false,
-            enableTextSelection: true,
-            emptyText: 'No records to display'
-          }}
-          columns={[
-            {text: "name", dataIndex: "name"},
-            {text: "email", dataIndex: "email", width: 200},
-            //{text: "Email 2", dataIndex: "email", width: 200},
-            {
-              xtype: 'actioncolumn',
-              menuDisabled: true,
-              width: 40,
-              iconCls: 'x-fa fa-envelope',
-              handler: self.onOpenWindow
-            },
-            {text: "% Change", dataIndex: "priceChangePct", align: "right", producesHTML: false, renderer: self.renderSign}
-          ]}
+        <ExtContainer
+            region='center'
+            layout='border'
+            // height='100%'
         >
-          {/*<ExtToolbar
-            dock = 'top'
+          <ExtGrid
+            title="The Grid"
+            region='center'
+            // height='100%'
+            // flex={1}
+            height={500}
+            store={this.store}
+            plugins={'gridfilters'}
+            onRowdblclick={self.props.onRowDblClick}
+            viewConfig={{
+              markDirty: false,
+              enableTextSelection: true,
+              emptyText: 'No records to display'
+            }}
+            columns={[
+              { text: "name", dataIndex: "name" },
+              { text: "email", dataIndex: "email", width: 200 },
+              //{text: "Email 2", dataIndex: "email", width: 200},
+              {
+                xtype: 'actioncolumn',
+                menuDisabled: true,
+                width: 40,
+                iconCls: 'x-fa fa-envelope',
+                handler: self.onOpenWindow
+              },
+              { text: "% Change", dataIndex: "priceChangePct", align: "right", producesHTML: false, renderer: self.renderSign }
+            ]}
+          >
+            {/* <ExtToolbar
+              dock='bottom'
+            >
+              <ExtButton
+                text='test'
+              />
+            </ExtToolbar> */}
+          </ExtGrid>
+          {/* BUG #9: Ext Container elements do not append children in the correct order using the React way */}
+          <ExtToolbar
+            region='south'
           >
             <ExtButton
-              text = 'test'
+              text={`${showEvenButtons ? 'Hide' : 'Display'} Even Buttons`}
+              handler={() => this.setState({ showEvenButtons: !this.state.showEvenButtons })}
             />
-          </ExtToolbar>*/}
-        </ExtGrid>
+            <ExtTbseparator />
+            <ExtButton text='ONE (1)' />
+            {showEvenButtons && <ExtButton text='TWO (2)' />}
+            <ExtButton text='THREE (3)' />
+            {showEvenButtons && <ExtButton text='FOUR (4)' />}
+            <ExtButton text='FIVE (5)' />
+            {showEvenButtons && <ExtButton text='SIX (6)' />}
+            <ExtButton text='SEVEN (6)' />
+            {showEvenButtons && <ExtButton text='EIGHT (8)' />}
+            <ExtButton text='NINE (9)' />
+            {showEvenButtons && <ExtButton text='TEN (10)' />}
+          </ExtToolbar>
+          {/* BUG #9 */}
+        </ExtContainer>
         <ExtPanel
-          title = 'Panel with split'
-          region = 'west'
-          split = {true}
-          collapsible = {true}
-          width = {300}
+          title='Panel with split'
+          region='west'
+          split={true}
+          collapsible={true}
+          width={300}
         ></ExtPanel>
       </ExtPanel>
     )

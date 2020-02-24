@@ -50,3 +50,13 @@
 ---------------------------------------------------------------------------------------
 
 7) TextField onFocus and onBlur event is being fired twice: Please look for the
+
+8) 	Grid Cell Renderer does not display tooltips: Please look for the "renderSign" function at
+	./src/components/grid/Grid.js. A tooltip was added to the cell doing context.tdAttr = 'data-qtip="my tooltip"'.
+	It is supposed to display a tooltip for all the cells of the "% Change" column, but it does not show any
+	tooltips in the corresponding grid cells. This is the way it works in ExtJS classic.
+
+9)	Ext Container elements do not append children in the correct order using the React way. In ./src/components/grid/Grid.js
+	there's a toolbar which has 10 buttons named from 'One' to 'Ten' (all displayed by default). When the button is clicked,
+	the even buttons are hidden. When the button is clicked again, the even buttons should appear in the same order as before.
+	However, when the even buttons reappear, they are appended after all the odd buttons instead of their original position.
