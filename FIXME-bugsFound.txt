@@ -60,3 +60,21 @@
 	there's a toolbar which has 10 buttons named from 'One' to 'Ten' (all displayed by default). When the button is clicked,
 	the even buttons are hidden. When the button is clicked again, the even buttons should appear in the same order as before.
 	However, when the even buttons reappear, they are appended after all the odd buttons instead of their original position.
+
+---------------------------------------------------------------------------------------
+
+10) Responsive COnfig is not working for Forms: Please look for the responsive definition at: src/components/form/Form.js:29
+In order to test this, run the app, then double click in a grid row, the form will appear and then change the size of wht window
+you will see in the console log that following error appears:
+
+ext.js:65761 Uncaught TypeError: Cannot read property 'dom' of undefined
+    at constructor.moveItem (ext.js:65761)
+    at constructor.renderItems (ext.js:65721)
+    at constructor.renderChildren (ext.js:66022)
+    at constructor.invalidate (ext.js:107541)
+    at constructor.invalidate (ext.js:107545)
+    at constructor.invalidate (ext.js:107545)
+    at constructor.flushInvalidates (ext.js:107454)
+    at constructor.run (ext.js:107749)
+    at Function.flushLayouts (ext.js:34381)
+    at Function.resumeLayouts (ext.js:34386)

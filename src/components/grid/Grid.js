@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {ExtPanel, ExtGrid, ExtContainer, ExtToolbar, ExtButton, ExtTbseparator} from '@sencha/ext-react-classic';
+import { small, medium } from '../../ResponsiveFormulas';
 import Window from '../window/Window';
 
 class Grid extends Component {
@@ -10,7 +11,7 @@ class Grid extends Component {
 
   state = {
     currentRecord: undefined,
-    showEvenButtons: true 
+    showEvenButtons: true
   };
 
   //-----------------------------------
@@ -93,16 +94,13 @@ class Grid extends Component {
           onClose = {self.onCloseWindow}
         />}
         <ExtContainer
-            region='center'
-            layout='border'
-            // height='100%'
+          region='center'
+          layout='border'
+          // height='100%'
         >
           <ExtGrid
             title="The Grid"
             region='center'
-            // height='100%'
-            // flex={1}
-            height={500}
             store={this.store}
             plugins={'gridfilters'}
             onRowdblclick={self.props.onRowDblClick}
@@ -112,9 +110,15 @@ class Grid extends Component {
               emptyText: 'No records to display'
             }}
             columns={[
-              { text: "name", dataIndex: "name" },
-              { text: "email", dataIndex: "email", width: 200 },
-              //{text: "Email 2", dataIndex: "email", width: 200},
+              {
+                text: "name",
+                dataIndex: "name"
+              },
+              {
+                text: "email",
+                dataIndex: "email",
+                width: 200,
+              },
               {
                 xtype: 'actioncolumn',
                 menuDisabled: true,
@@ -122,7 +126,13 @@ class Grid extends Component {
                 iconCls: 'x-fa fa-envelope',
                 handler: self.onOpenWindow
               },
-              { text: "% Change", dataIndex: "priceChangePct", align: "right", producesHTML: false, renderer: self.renderSign }
+              {
+                text: "% Change",
+                dataIndex: "priceChangePct",
+                align: "right",
+                producesHTML: false,
+                renderer: self.renderSign
+              }
             ]}
           >
             {/* <ExtToolbar
@@ -157,10 +167,19 @@ class Grid extends Component {
         </ExtContainer>
         <ExtPanel
           title='Panel with split'
-          region='west'
+          region = 'north'
+          responsiveConfig = {{
+            [small]: {
+              region: 'north'
+            },
+            [medium]: {
+              region: 'west'
+            }
+          }}
           split={true}
           collapsible={true}
           width={300}
+          height={300}
         ></ExtPanel>
       </ExtPanel>
     )

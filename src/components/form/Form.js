@@ -14,6 +14,7 @@ import {
   ExtTimefield,
   ExtTextareafield, ExtPanel, ExtButton
 } from '@sencha/ext-react-classic';
+import { small, medium } from '../../ResponsiveFormulas';
 
 class Form extends Component {
 
@@ -24,7 +25,15 @@ class Form extends Component {
     return (
       <ExtForm
         title = "The Form"
-        layout = "anchor"
+        //layout = "hbox"
+        responsiveConfig = {{
+          [small]: {
+            layout : 'vbox'
+          },
+          [medium]: {
+            layout : 'hbox'
+          }
+        }}
         itemId = {self.props.itemId}
         defaults = {{
           anchor: '100%',
