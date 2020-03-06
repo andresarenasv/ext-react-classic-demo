@@ -25,7 +25,7 @@ class Form extends Component {
     return (
       <ExtForm
         title = "The Form"
-        //layout = "hbox"
+        layout = "hbox"
         responsiveConfig = {{
           [small]: {
             layout : 'vbox'

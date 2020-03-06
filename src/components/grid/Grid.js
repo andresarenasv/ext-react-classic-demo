@@ -68,6 +68,18 @@ class Grid extends Component {
   /**
    *
    */
+  onMaskGrid = (view, rowIndex, colIndex, item, e, record) => {
+    const self = this;
+
+    self.panel.mask('Loading ...');
+    setTimeout(() => {
+      self.panel.unmask();
+    }, 2000);
+  };
+
+  /**
+   *
+   */
   onCloseWindow = () => {
     this.setState({currentRecord: undefined});
   };
@@ -88,6 +100,7 @@ class Grid extends Component {
       <ExtPanel
         layout = 'border'
         itemId = {self.props.itemId}
+        ref = {el => this.panel = el ? el.cmp : null}
       >
         {typeof currentRecord !== 'undefined' && <Window
           currentRecord = {currentRecord}
@@ -125,6 +138,13 @@ class Grid extends Component {
                 width: 40,
                 iconCls: 'x-fa fa-envelope',
                 handler: self.onOpenWindow
+              },
+              {
+                xtype: 'actioncolumn',
+                menuDisabled: true,
+                width: 40,
+                iconCls: 'x-fa fa-check',
+                handler: self.onMaskGrid
               },
               {
                 text: "% Change",

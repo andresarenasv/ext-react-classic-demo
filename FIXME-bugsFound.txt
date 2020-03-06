@@ -78,3 +78,9 @@ ext.js:65761 Uncaught TypeError: Cannot read property 'dom' of undefined
     at constructor.run (ext.js:107749)
     at Function.flushLayouts (ext.js:34381)
     at Function.resumeLayouts (ext.js:34386)
+
+
+11) Mask gift is not loading: Please look at src/components/grid/Grid.js:71. In order to test this, run the app, and then click on
+any checkIcon of the grid. A mask will appear but the gift does not appear
+
+Failed to load resource: the server responded with a status of 404 (Not Found) loading.gif:1

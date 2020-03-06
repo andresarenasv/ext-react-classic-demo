@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ExtReactDOM from '@sencha/ext-react-classic';
 import App from './App';
 import './index.css';
 
-const Ext = window['Ext'];
-Ext.onReady(() => {
-	ReactDOM.render(<App />, document.getElementById('root'));
-});
+ExtReactDOM.render(<App />, document.getElementById('root'));
