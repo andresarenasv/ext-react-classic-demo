@@ -84,3 +84,12 @@ ext.js:65761 Uncaught TypeError: Cannot read property 'dom' of undefined
 any checkIcon of the grid. A mask will appear but the gift does not appear
 
 Failed to load resource: the server responded with a status of 404 (Not Found) loading.gif:1
+
+---------------------------------------------------------------------------------------
+
+12) IMPORTANT, please check App,js render method. we are rendering two components based on a state change. But when the state changes,
+the second component is not rendering. In order to test this, you just need to run the app and wait for the alert message. If you check
+the dev tools, after the state change, the second component is displayed as a web component instead of html
+
+src/App.js:51
+src/App.js:28
