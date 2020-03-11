@@ -1,19 +1,5 @@
 import React, {Component} from 'react';
-import {
-  ExtCheckboxfield,
-  ExtColorfield,
-  ExtCombobox,
-  ExtDatefield,
-  ExtFieldset,
-  ExtFilefield,
-  ExtForm,
-  ExtNumberfield,
-  ExtRadiofield,
-  ExtTagfield,
-  ExtTextfield,
-  ExtTimefield,
-  ExtTextareafield, ExtPanel, ExtButton
-} from '@sencha/ext-react-classic';
+import { ExtForm, ExtTextfield, ExtButton, ExtUxiframe} from '@sencha/ext-react-classic';
 import { small, medium } from '../../ResponsiveFormulas';
 
 class Form extends Component {
@@ -67,6 +53,7 @@ class Form extends Component {
           text={'close'}
           handler={self.props.onClose}
         />
+        <ExtUxiframe/>
       </ExtForm>
     )
   }

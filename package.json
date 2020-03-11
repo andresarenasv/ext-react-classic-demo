@@ -101,11 +101,7 @@
       "enzyme"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less)$": "<rootDir>/ext-react/packages/test-helpers/css-stub.js",
-      "app-globals": "<rootDir>/src/Globals.js",
-      "app-localization": "<rootDir>/src/localization/default.js",
-      "@atg/utilities": "<rootDir>/ext-react/packages/utilities/index.js",
-      "@atg/agent-scheduling": "<rootDir>/ext-react/packages/agent-scheduling/index.js"
+      "^.+\\.(css|less)$": "<rootDir>/ext-react/packages/test-helpers/css-stub.js"
     },
     "setupFiles": [
       "<rootDir>/ext-react/packages/test-helpers/setup.js"

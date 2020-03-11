@@ -19,17 +19,6 @@ export default class App extends Component {
   // Lifecycle Methods
   // ---------------------------------
 
-  /**
-   *
-   */
-  componentDidMount () {
-    setTimeout(()=> {
-      alert(`state is going to change and it should render the second component but it is not happening, 
-      it seems that is rendering a pure web component instead of the parse html`);
-      this.setState({change: false});
-    }, 5000);
-  }
-
   //-----------------------------------
   // Handlers
   //-----------------------------------

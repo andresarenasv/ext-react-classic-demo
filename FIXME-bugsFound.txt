@@ -93,3 +93,19 @@ the dev tools, after the state change, the second component is displayed as a we
 
 src/App.js:51
 src/App.js:28
+
+------------------------------------------------------------------------------------------
+
+13) Error when trying to use uxiframe.
+
+Uncaught Error: [Ext.create] Unrecognized class name / alias: widget.uxiframe
+    at Object.create (VM10 ext.js:11776)
+    at HTMLElement.newDoExtCreate (main.js:65610)
+    at HTMLElement.doCreateExtComponent (main.js:65597)
+    at ReactComponent.componentDidMount (main.js:6116)
+    at commitLifeCycles (main.js:95255)
+    at commitLayoutEffects (main.js:98498)
+    at HTMLUnknownElement.callCallback (main.js:73490)
+    at Object.invokeGuardedCallbackDev (main.js:73539)
+    at invokeGuardedCallback (main.js:73594)
+    at commitRootImpl (main.js:98236)
