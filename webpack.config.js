@@ -31,7 +31,10 @@ module.exports = function (env) {
         framework: 'react',
         toolkit: toolkit,
         theme: `theme-triton`,
-        packages: [],
+        packages: [
+          'ux',
+          'charts'
+        ],
         script: '',
         emit: 'yes',
         port: port,

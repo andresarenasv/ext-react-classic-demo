@@ -1,4 +1,4 @@
-1) field regex validation is not working: If you define following textfield and error is appearing upon input change
+1) [FIXED] field regex validation is not working: If you define following textfield and error is appearing upon input change
 	(Uncaught TypeError: regex.test is not a function).
 
 	Please check -> ./src/components/form/Form.js:44
@@ -10,7 +10,7 @@
 		  regex = {/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im}
 		/>
 
-2) (Critical) Column functions like: renderer, getClass, isActionDisabled, are being called several times upon state
+2) [FIXED] (Critical) Column functions like: renderer, getClass, isActionDisabled, are being called several times upon state
 	change (This is only happening in classic, and should not happen based on: https://reactjs.org/docs/rendering-elements.html &
 	https://reactjs.org/docs/rendering-elements.html#react-only-updates-whats-necessary) In order to test this, you need
 	to run the app -> npm start, a grid will appear, there is an action column with an envelope icon, please open the browser console
@@ -20,7 +20,7 @@
 	views, we have a use case in which we have a view with a tab panel that have at least 8 grids and each grid have at least 8 columns
 	and each grid have at least 4 renderers. Note: the render method should not be called, and this does not happen in modern
 
-3) Browser is refreshing before the watch is finished (only happening in classic): In order to test this you need to start
+3) [FIXED] Browser is refreshing before the watch is finished (only happening in classic): In order to test this you need to start
 	the app, and then uncomment line. ./src/components/grid/Grid.js:105. You will see that the sencha app compile process start,
 	then it refresh the browser, but in the browser app wont render and following error appear:
 
@@ -36,27 +36,27 @@
       at bootstrap:793
       at bootstrap:793
 
-4) Toolbar Dock top or button is not working: Please look for the Toolbar definition at: ./src/components/grid/Grid.js:116
+4) [FIXED] Toolbar Dock top or button is not working: Please look for the Toolbar definition at: ./src/components/grid/Grid.js:116
 	and uncomment those lines. we want to have a top toolbar inside a grid without having unnesesary nesting. We know that we have have a wrapper panel for
 	the grid and add the toolbar (it is working fine). Just run the app and you will see the result.
 
-5) Panel Split property not working: Please look for Panel definition at: ./src/components/grid/Grid.js:127. We have defined a panel
+5) [FIXED] Panel Split property not working: Please look for Panel definition at: ./src/components/grid/Grid.js:127. We have defined a panel
 	with the split property, but the splitter is not showing in the UI
 
-6) Window listeners are not getting fired: Please look at ./src/components/window/Window.js:53 we are trying to log in
+6) [FIXED] Window listeners are not getting fired: Please look at ./src/components/window/Window.js:53 we are trying to log in
 	console the show, boxready, afterrender events and we have tried different ways and none one is working. Question - are all the events
 	of the components supported? is there any doc for ext react classic? Note - this is working in Modern
 
 ---------------------------------------------------------------------------------------
 
-7) TextField onFocus and onBlur event is being fired twice: Please look for the
+7) [FIXED] TextField onFocus and onBlur event is being fired twice: Please look for the
 
-8) 	Grid Cell Renderer does not display tooltips: Please look for the "renderSign" function at
+8) [FIXED] 	Grid Cell Renderer does not display tooltips: Please look for the "renderSign" function at
 	./src/components/grid/Grid.js. A tooltip was added to the cell doing context.tdAttr = 'data-qtip="my tooltip"'.
 	It is supposed to display a tooltip for all the cells of the "% Change" column, but it does not show any
 	tooltips in the corresponding grid cells. This is the way it works in ExtJS classic.
 
-9)	Ext Container elements do not append children in the correct order using the React way. In ./src/components/grid/Grid.js
+9) [FIXED]	Ext Container elements do not append children in the correct order using the React way. In ./src/components/grid/Grid.js
 	there's a toolbar which has 10 buttons named from 'One' to 'Ten' (all displayed by default). When the button is clicked,
 	the even buttons are hidden. When the button is clicked again, the even buttons should appear in the same order as before.
 	However, when the even buttons reappear, they are appended after all the odd buttons instead of their original position.
@@ -87,7 +87,7 @@ Failed to load resource: the server responded with a status of 404 (Not Found) l
 
 ---------------------------------------------------------------------------------------
 
-12) IMPORTANT, please check App,js render method. we are rendering two components based on a state change. But when the state changes,
+12) [FIXED] IMPORTANT, please check App,js render method. we are rendering two components based on a state change. But when the state changes,
 the second component is not rendering. In order to test this, you just need to run the app and wait for the alert message. If you check
 the dev tools, after the state change, the second component is displayed as a web component instead of html
 
@@ -96,7 +96,7 @@ src/App.js:28
 
 ------------------------------------------------------------------------------------------
 
-13) Error when trying to use uxiframe.
+13) Error when trying to use uxiframe. When we add an iFrame in src/components/form/Form.js the application fails:
 
 Uncaught Error: [Ext.create] Unrecognized class name / alias: widget.uxiframe
     at Object.create (VM10 ext.js:11776)
