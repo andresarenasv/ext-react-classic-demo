@@ -28,7 +28,7 @@ class Grid extends Component {
       { name: 'Nick', v: true, email: 'nick@gmail.com',priceChangePct: .35 },
       { name: 'Andy', v: true, email: 'andy@gmail.com',priceChangePct: 1.45 }
     ];
-    this.store = { xtype: 'store', data: data }
+    this.store = Ext.create('Ext.data.Store', {data: data });
   }
 
   /**
@@ -178,7 +178,7 @@ class Grid extends Component {
             {showEvenButtons && <ExtButton text='FOUR (4)' />}
             <ExtButton text='FIVE (5)' />
             {showEvenButtons && <ExtButton text='SIX (6)' />}
-            <ExtButton text='SEVEN (6)' />
+            <ExtButton text='SEVEN (7)' />
             {showEvenButtons && <ExtButton text='EIGHT (8)' />}
             <ExtButton text='NINE (9)' />
             {showEvenButtons && <ExtButton text='TEN (10)' />}

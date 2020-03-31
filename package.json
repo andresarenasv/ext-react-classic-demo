@@ -103,10 +103,10 @@
       "enzyme"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less)$": "<rootDir>/ext-react/packages/test-helpers/css-stub.js"
+      "^.+\\.(css|less)$": "<rootDir>/tests/helpers/css-stub.js"
     },
     "setupFiles": [
-      "<rootDir>/ext-react/packages/test-helpers/setup.js"
+      "<rootDir>/tests/helpers/setup.js"
     ]
   }
 }

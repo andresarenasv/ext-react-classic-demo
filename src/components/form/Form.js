@@ -11,13 +11,12 @@ class Form extends Component {
     return (
       <ExtForm
         title = "The Form"
-        layout = "hbox"
         responsiveConfig = {{
           [small]: {
-            layout : 'vbox'
+            layout : 'hbox'
           },
           [medium]: {
-            layout : 'hbox'
+            layout : 'vbox'
           }
         }}
         itemId = {self.props.itemId}

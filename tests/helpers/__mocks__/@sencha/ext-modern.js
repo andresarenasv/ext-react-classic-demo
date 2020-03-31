@@ -1,0 +1,36 @@
+import React from 'react';
+
+const getMockedExtComponent = props => <div {...props} />;
+
+export const Button = props => <input type={'button'} {...props} />;
+export const Column = props => getMockedExtComponent(props);
+export const ComboBoxField = props => getMockedExtComponent(props);
+export const CheckBoxField = props => getMockedExtComponent(props);
+export const PasswordField = props => getMockedExtComponent(props);
+export const Container = props => getMockedExtComponent(props);
+export const ContainerField = props => getMockedExtComponent(props);
+export const DateColumn = props => getMockedExtComponent(props);
+export const Dialog = props => getMockedExtComponent(props);
+export const DatePickerField = props => getMockedExtComponent(props);
+export const EmailField = props => getMockedExtComponent(props);
+export const Grid = props => getMockedExtComponent(props);
+export const FieldSet = props => getMockedExtComponent(props);
+export const FormPanel = props => getMockedExtComponent(props);
+export const Label = props => getMockedExtComponent(props);
+export const LockedGrid = props => getMockedExtComponent(props);
+export const Panel = props => getMockedExtComponent(props);
+export const Menu = props => getMockedExtComponent(props);
+export const MenuItem = props => getMockedExtComponent(props);
+export const MenuSeparator = props => getMockedExtComponent(props);
+export const Tab = props => getMockedExtComponent(props);
+export const TabBar = props => getMockedExtComponent(props);
+export const Spacer = props => getMockedExtComponent(props);
+export const SpinnerField = props => getMockedExtComponent(props);
+export const SearchField = props => getMockedExtComponent(props);
+export const NumberField = props => getMockedExtComponent(props);
+export const RadioField = props => getMockedExtComponent(props);
+export const TextField = props => getMockedExtComponent(props);
+export const TextAreaField = props => getMockedExtComponent(props);
+export const TimeField = props => getMockedExtComponent(props);
+export const Toolbar = props => getMockedExtComponent(props);
+export const TitleBar = props => getMockedExtComponent(props);

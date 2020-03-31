@@ -1,3 +1,54 @@
+---------------------------------------------------------------------------------------
+
+                           PENDING
+
+---------------------------------------------------------------------------------------
+
+10) Responsive COnfig is not working for Forms: Please look for the responsive definition at: src/components/form/Form.js:29
+In order to test this, run the app, then double click in a grid row, the form will appear and then change the size of wht window
+you will see in the console log that following error appears:
+
+ext.js:65761 Uncaught TypeError: Cannot read property 'dom' of undefined
+    at constructor.moveItem (ext.js:65761)
+    at constructor.renderItems (ext.js:65721)
+    at constructor.renderChildren (ext.js:66022)
+    at constructor.invalidate (ext.js:107541)
+    at constructor.invalidate (ext.js:107545)
+    at constructor.invalidate (ext.js:107545)
+    at constructor.flushInvalidates (ext.js:107454)
+    at constructor.run (ext.js:107749)
+    at Function.flushLayouts (ext.js:34381)
+    at Function.resumeLayouts (ext.js:34386)
+
+
+11) Mask gift is not loading: Please look at src/components/grid/Grid.js:71. In order to test this, run the app, and then click on
+any checkIcon of the grid. A mask will appear but the gift does not appear
+
+Failed to load resource: the server responded with a status of 404 (Not Found) loading.gif:1
+
+12) JEST TESTING: So far we are able to use jest in Ext-React apps by mocking the Ext runtime and every component we use, please check
+following paths:
+
+	1. tests/helpers/setup.js:5
+	2. tests/helpers/__mocks__/@sencha/ext-react-classic.js:4
+	3. package.json:86
+
+The reason to mock is because the jest process doesn't reactify the Sencha Components.
+
+This in cumbersome because we have to do it for every single feature used from Ext Engine, besides we are not able to test fully
+most of the components, eg. loading data into a grid as we are not able to create a store.
+
+Is there a way to preload the Ext runtime/engine and the components in order to avoid mocking for using jest + webpack in our testing
+
+In order to test this just make sure you have previously installed Jest and type in terminal: $ jest
+
+
+------------------------------------------------------------------------------------------
+
+                                    FIXED
+
+------------------------------------------------------------------------------------------
+
 1) [FIXED] field regex validation is not working: If you define following textfield and error is appearing upon input change
 	(Uncaught TypeError: regex.test is not a function).
 
@@ -47,8 +98,6 @@
 	console the show, boxready, afterrender events and we have tried different ways and none one is working. Question - are all the events
 	of the components supported? is there any doc for ext react classic? Note - this is working in Modern
 
----------------------------------------------------------------------------------------
-
 7) [FIXED] TextField onFocus and onBlur event is being fired twice: Please look for the
 
 8) [FIXED] 	Grid Cell Renderer does not display tooltips: Please look for the "renderSign" function at
@@ -61,32 +110,6 @@
 	the even buttons are hidden. When the button is clicked again, the even buttons should appear in the same order as before.
 	However, when the even buttons reappear, they are appended after all the odd buttons instead of their original position.
 
----------------------------------------------------------------------------------------
-
-10) Responsive COnfig is not working for Forms: Please look for the responsive definition at: src/components/form/Form.js:29
-In order to test this, run the app, then double click in a grid row, the form will appear and then change the size of wht window
-you will see in the console log that following error appears:
-
-ext.js:65761 Uncaught TypeError: Cannot read property 'dom' of undefined
-    at constructor.moveItem (ext.js:65761)
-    at constructor.renderItems (ext.js:65721)
-    at constructor.renderChildren (ext.js:66022)
-    at constructor.invalidate (ext.js:107541)
-    at constructor.invalidate (ext.js:107545)
-    at constructor.invalidate (ext.js:107545)
-    at constructor.flushInvalidates (ext.js:107454)
-    at constructor.run (ext.js:107749)
-    at Function.flushLayouts (ext.js:34381)
-    at Function.resumeLayouts (ext.js:34386)
-
-
-11) Mask gift is not loading: Please look at src/components/grid/Grid.js:71. In order to test this, run the app, and then click on
-any checkIcon of the grid. A mask will appear but the gift does not appear
-
-Failed to load resource: the server responded with a status of 404 (Not Found) loading.gif:1
-
----------------------------------------------------------------------------------------
-
 12) [FIXED] IMPORTANT, please check App,js render method. we are rendering two components based on a state change. But when the state changes,
 the second component is not rendering. In order to test this, you just need to run the app and wait for the alert message. If you check
 the dev tools, after the state change, the second component is displayed as a web component instead of html
@@ -94,9 +117,7 @@ the dev tools, after the state change, the second component is displayed as a we
 src/App.js:51
 src/App.js:28
 
-------------------------------------------------------------------------------------------
-
-13) Error when trying to use uxiframe. When we add an iFrame in src/components/form/Form.js the application fails:
+13) [Fixed] Error when trying to use uxiframe. When we add an iFrame in src/components/form/Form.js the application fails:
 
 Uncaught Error: [Ext.create] Unrecognized class name / alias: widget.uxiframe
     at Object.create (VM10 ext.js:11776)
