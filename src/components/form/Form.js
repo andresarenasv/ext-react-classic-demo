@@ -10,7 +10,7 @@ class Form extends Component {
 
     return (
       <ExtForm
-        title = "The Form"
+        tabConfig={self.props.tabConfig}
         responsiveConfig = {{
           [small]: {
             layout : 'hbox'

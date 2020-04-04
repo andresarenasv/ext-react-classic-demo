@@ -43,6 +43,18 @@ Is there a way to preload the Ext runtime/engine and the components in order to 
 In order to test this just make sure you have previously installed Jest and type in terminal: $ jest
 
 
+14) TAB PANELS: Look for the "src\components\main\TabPanel.js" file. That file contains the code and the notes with the issues
+listed here:
+
+	14-1) The activeTab config doesn't work. The activeTab needs to be set programmatically.
+
+	14-2) The tabBar config doesn't support JSX elements. It would be great to add support to JSX components to the tabBar
+	config. In this case, I created a mock "logout" button that could be used in other components as well.
+
+	14-3) Looks like the tabConfig config does not support:		style.pointerElements = 'all'.
+	This is supported in ExtJS and it's very useful to show tooltips in disabled elements. If you check the "A Logout Here!"
+	tab in the app, you can see there's a disabled button that displays a tooltip (pointerElements = 'all' works for the button).
+
 ------------------------------------------------------------------------------------------
 
                                     FIXED

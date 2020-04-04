@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ExtContainer } from '@sencha/ext-react-classic';
 import Card from './components/card/Card';
 import Form from './components/form/Form';
+import MyTabPanel from './components/main/TabPanel';
 
 // Enable responsiveConfig app-wide. You can remove this if you don't plan to build a responsive UI.
 Ext.require('Ext.plugin.Responsive');
@@ -12,7 +13,7 @@ export default class App extends Component {
   //-----------------------------------
 
   state = {
-    change: true,
+    change: false,
   };
 
   // ---------------------------------
@@ -37,8 +38,9 @@ export default class App extends Component {
         layout = 'fit'
         viewport = {true}
       >
-        {change && <Card/>}
-        {!change && <Form/>}
+        {/* {change && <Card/>}
+        {!change && <Form/>} */}
+        <MyTabPanel />
       </ExtContainer>
     )
   }

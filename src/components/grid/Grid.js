@@ -98,6 +98,7 @@ class Grid extends Component {
     console.count(`Render Grid has been called`);
     return (
       <ExtPanel
+        tabConfig={self.props.tabConfig}
         layout = 'border'
         itemId = {self.props.itemId}
         ref = {el => this.panel = el ? el.cmp : null}
@@ -202,7 +203,7 @@ class Grid extends Component {
           height={300}
         ></ExtPanel>
       </ExtPanel>
-    )
+    );
   }
 }
 export default Grid;
