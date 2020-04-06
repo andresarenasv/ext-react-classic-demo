@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ExtPanel, ExtGrid, ExtContainer, ExtToolbar, ExtButton, ExtTbseparator} from '@sencha/ext-react-classic';
+import {ExtPanel, ExtGrid, ExtContainer, ExtToolbar, ExtButton, ExtTbseparator, ExtCombobox} from '@sencha/ext-react-classic';
 import { small, medium } from '../../ResponsiveFormulas';
 import Window from '../window/Window';
 
@@ -11,7 +11,7 @@ class Grid extends Component {
 
   state = {
     currentRecord: undefined,
-    showEvenButtons: true
+    showEvenButtons: false
   };
 
   //-----------------------------------
@@ -165,6 +165,8 @@ class Grid extends Component {
             </ExtToolbar> */}
           </ExtGrid>
           {/* BUG #9: Ext Container elements do not append children in the correct order using the React way */}
+          {/* BUG #15-1: Ext Container elements do not append children in the correct order using the React way if showEventButtons
+          initial value is false */}
           <ExtToolbar
             region='south'
           >

@@ -55,6 +55,22 @@ listed here:
 	This is supported in ExtJS and it's very useful to show tooltips in disabled elements. If you check the "A Logout Here!"
 	tab in the app, you can see there's a disabled button that displays a tooltip (pointerElements = 'all' works for the button).
 
+15) Very similar to #9 (but not the same):
+
+	15-1) Ext Container elements do not append children in the correct order using the React way IF the conditionals of the
+	elements were initially false. Please check: src\components\grid\Grid.js BUG #15-1.
+
+	15-2) When the key value of the element changes the element is recreated (this needed to recreate views for instance, when
+	the Ext component has a property that is not bindable). After the element is recreated, it is appended at the end.
+	Please check: src\components\form\Form.js BUG #15-2.
+
+16) Load .scss files the same way that in ExtJS: some views have custom styles and ExtJS mixins that are only used for those
+views, but at this moment if we try to define a mixing (e.g., @mixin extjs-button-small-ui) in a scss file outside the scope
+of the theme, the application breaks because the ExtJS mixins are not found.
+
+	Please check: src\components\form\Form.js BUG #16, and src\components\form\Form.scss.
+
+
 ------------------------------------------------------------------------------------------
 
                                     FIXED
