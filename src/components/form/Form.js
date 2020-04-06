@@ -78,7 +78,7 @@ class Form extends Component {
             text='Recreate Nickname and Address Fields'
             // BUG #16: not able to use mixins defined outside the scope of the ExtJS theme used
             ui='delete'   // From our custom theme. Works. (ext-react\packages\custom-theme\sass\src\button\Button.scss)
-            // ui='my-add'   // From ./Form.scss. The app breaks if trying to use that mixin
+            // ui='my-add'   // From ./Form.scss. The app breaks when trying to use that mixin
             handler={() => {
               self.setState({
                 nicknameKey: self.state.nicknameKey + 1,
