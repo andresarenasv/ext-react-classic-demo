@@ -1,0 +1,24 @@
+//----------------------------------------------
+// Override
+//----------------------------------------------
+
+.x-column-header-text {
+	font-weight: bold;
+}
+
+.x-grid-row {
+	outline: none;
+	height: 50px;
+}
+
+.x-action-col-1 {
+	margin-left: 8px;
+}
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------
+
+.hide-subcolumn-right-border {
+	border-right: none !important;
+}

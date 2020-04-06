@@ -1,0 +1,57 @@
+@include extjs-button-small-ui (
+				$ui: 'add',
+				$background-color: $green,
+				$border-color: $green
+)
+
+@include extjs-button-small-ui (
+				$ui: 'select',
+				$background-color: $base-color,
+				$border-color: $base-color
+)
+
+@include extjs-button-small-ui (
+				$ui: 'delete',
+				$background-color: $red,
+				$border-color: $red
+)
+
+@include extjs-button-small-ui (
+				$ui: 'cancel',
+				$background-color: $grey-dark,
+				$border-color: $grey-dark
+)
+
+@include extjs-button-small-ui(
+	$ui: 'session-button',
+
+	$border-width: 0,
+
+	$color: $white,
+	$color-over: $white,
+	$color-pressed: $white,
+	$color-focus: $white,
+	$color-focus-over: $white,
+	$color-focus-pressed: $white,
+	$color-disabled: $white,
+
+	$glyph-color: $white,
+	$arrow-glyph-color: $white,
+
+	$background-color: transparent,
+	$background-color-over: transparent,
+	$background-color-pressed: transparent,
+	$background-color-focus: transparent,
+	$background-color-focus-over: transparent,
+	$background-color-focus-pressed: transparent,
+	$background-color-disabled: transparent
+);
+
+//----------------------------------------------
+// Override
+//----------------------------------------------
+
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------

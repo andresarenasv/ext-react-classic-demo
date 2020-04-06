@@ -30,7 +30,7 @@ module.exports = function (env) {
       new ExtWebpackPlugin({
         framework: 'react',
         toolkit: toolkit,
-        theme: `theme-triton`,
+        theme: `custom-theme`,
         packages: [
           'ux',
           'charts'

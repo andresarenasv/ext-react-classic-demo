@@ -1,0 +1,433 @@
+//----------------------------------------------
+// MAIN TABS
+//----------------------------------------------
+
+@include extjs-panel-ui (
+				$ui: 'main-toolbar',
+				$ui-header-color: $white,
+				$ui-header-background-color: $base-color,
+				$ui-header-padding: 12px 0 12px 16px,
+				$ui-header-font-size: 15px,
+				$ui-header-line-height: 20px,
+				$ui-header-font-weight: 500
+);
+
+@include extjs-tab-panel-ui (
+				$ui: 'main-toolbar',
+				$ui-bar-background-color: $base-color,
+				$ui-tab-background-color: $base-color,
+				$ui-tab-background-color-over: $grey-medium,
+				$ui-tab-background-color-active: $grey-medium,
+				$ui-tab-background-color-focus: $grey-medium,
+				$ui-tab-background-color-focus-over: $grey-medium,
+				$ui-tab-background-color-focus-active: $grey-medium
+);
+
+//----------------------------------------------
+// Panels Themes - Mainly Used in Designer
+//----------------------------------------------
+
+@include extjs-panel-ui (
+				$ui: 'dark-blue-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $base-color,
+				$ui-header-border-color: $base-color,
+				$ui-border-color: $border-color
+);
+.x-panel-header-dark-blue-theme,
+.x-panel-header-dark-blue-theme .x-tool-tool-el,
+.x-panel-header-dark-blue-theme .x-title-text {
+	color: $white !important;
+	background: $base-color !important;
+	background-color: $base-color !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-dark-blue-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'blue-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $blue,
+				$ui-header-border-color: $blue,
+				$ui-border-color: $border-color
+);
+.x-panel-header-blue-theme,
+.x-panel-header-blue-theme .x-tool-tool-el,
+.x-panel-header-blue-theme .x-title-text {
+	color: $white !important;
+	background: $blue !important;
+	background-color: $blue !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-blue-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'light-blue-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $light-blue,
+				$ui-header-border-color: $light-blue,
+				$ui-border-color: $border-color
+);
+.x-panel-header-light-blue-theme,
+.x-panel-header-light-blue-theme .x-tool-tool-el,
+.x-panel-header-light-blue-theme .x-title-text {
+	color: $text-color !important;
+	background: $light-blue !important;
+	background-color: $light-blue !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-light-blue-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'dark-grey-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $grey-dark,
+				$ui-header-border-color: $grey-dark,
+				$ui-border-color: $border-color
+);
+.x-panel-header-dark-grey-theme,
+.x-panel-header-dark-grey-theme .x-tool-tool-el,
+.x-panel-header-dark-grey-theme .x-title-text {
+	color: $white !important;
+	background: $grey-dark !important;
+	background-color: $grey-dark !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-dark-grey-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'medium-grey-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $grey-medium,
+				$ui-header-border-color: $grey-medium,
+				$ui-border-color: $border-color
+);
+.x-panel-header-medium-grey-theme,
+.x-panel-header-medium-grey-theme .x-tool-tool-el,
+.x-panel-header-medium-grey-theme .x-title-text {
+	color: $text-color !important;
+	background: $grey-medium !important;
+	background-color: $grey-medium !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-medium-grey-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'light-grey-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $grey-light,
+				$ui-header-border-color: $grey-light,
+				$ui-border-color: $border-color
+);
+.x-panel-header-light-grey-theme,
+.x-panel-header-light-grey-theme .x-tool-tool-el,
+.x-panel-header-light-grey-theme .x-title-text {
+	color: $text-color !important;
+	background: $grey-light !important;
+	background-color: $grey-light !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-light-grey-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'green-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $green,
+				$ui-header-border-color: $green,
+				$ui-border-color: $border-color
+);
+.x-panel-header-green-theme,
+.x-panel-header-green-theme .x-tool-tool-el,
+.x-panel-header-green-theme .x-title-text {
+	color: $white !important;
+	background: $green !important;
+	background-color: $green !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-green-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'light-green-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $light-green,
+				$ui-header-border-color: $light-green,
+				$ui-border-color: $border-color
+);
+.x-panel-header-light-green-theme,
+.x-panel-header-light-green-theme .x-tool-tool-el,
+.x-panel-header-light-green-theme .x-title-text {
+	color: $text-color !important;
+	background: $light-green !important;
+	background-color: $light-green !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-light-green-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'white-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $white,
+				$ui-header-border-color: $white,
+				$ui-border-color: $border-color
+);
+.x-panel-header-white-theme,
+.x-panel-header-white-theme .x-tool-tool-el,
+.x-panel-header-white-theme .x-title-text {
+	color: $text-color !important;
+	background: $white !important;
+	background-color: $white !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-white-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'red-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $red,
+				$ui-header-border-color: $red,
+				$ui-border-color: $border-color
+);
+.x-panel-header-red-theme,
+.x-panel-header-red-theme .x-tool-tool-el,
+.x-panel-header-red-theme .x-title-text {
+	color: $white !important;
+	background: $red !important;
+	background-color: $red !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-red-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'orange-theme',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $orange,
+				$ui-header-border-color: $orange,
+				$ui-border-color: $border-color
+);
+.x-panel-header-orange-theme,
+.x-panel-header-orange-theme .x-tool-tool-el,
+.x-panel-header-orange-theme .x-title-text {
+	color: $white !important;
+	background: $orange !important;
+	background-color: $orange !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-orange-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+@include extjs-panel-ui (
+				$ui: 'yellow-theme',
+				$ui-header-color: $text-color,
+				$ui-header-glyph-color: $text-color,
+				$ui-tool-glyph-color: $text-color,
+
+				$ui-header-background-color: $yellow,
+				$ui-header-border-color: $yellow,
+				$ui-border-color: $border-color
+);
+.x-panel-header-yellow-theme,
+.x-panel-header-yellow-theme .x-tool-tool-el,
+.x-panel-header-yellow-theme .x-title-text {
+	color: $text-color !important;
+	background: $yellow !important;
+	background-color: $yellow !important;
+	border-color: $border-color !important;
+	cursor: pointer
+}
+.x-panel-yellow-theme.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+//----------------------------------------------
+// Second level Tabs
+//----------------------------------------------
+
+@include extjs-panel-ui (
+	$ui: 'sub-toolbar',
+	$ui-header-background-color: $grey-medium
+);
+
+@include extjs-tab-panel-ui (
+	$ui: 'sub-toolbar',
+	$ui-bar-background-color: $grey-medium,
+	$ui-tab-color: $text-color,
+	$ui-tab-color-over: $text-color
+);
+
+//----------------------------------------------
+// Special Tab Panel implementation - Custom Tabs
+//----------------------------------------------
+
+@include extjs-panel-ui (
+				$ui: 'custom-tabs',
+				$ui-header-color: $white,
+				$ui-header-glyph-color: $white,
+				$ui-tool-glyph-color: $white,
+
+				$ui-header-background-color: $base-color,
+				$ui-header-border-color: $base-color,
+				$ui-border-color: $border-color,
+				$ui-border-width: 1
+);
+
+@include extjs-tab-panel-ui (
+				$ui: 'custom-tabs',
+
+				$ui-tab-border-width: 1px,
+				$ui-tab-border-color: $grey-medium,
+				$ui-tab-border-color-active: $grey-medium,
+				$ui-tab-border-color-focus: $grey-medium,
+				$ui-tab-border-color-over: $grey-medium,
+				$ui-tab-border-color-disabled: $grey-light,
+
+				$ui-tab-background-color: $grey-light,
+				$ui-tab-background-color-focus: $white,
+				$ui-tab-background-color-over: $white,
+				$ui-tab-background-color-active: $white,
+				$ui-tab-background-color-disabled: $grey-light,
+
+				$ui-tab-color: $text-color,
+				$ui-tab-color-focus: $text-color,
+				$ui-tab-color-over: $text-color,
+				$ui-tab-color-active: $text-color,
+				$ui-tab-color-disabled: $grey-medium
+);
+
+.x-panel-header-default-horizontal.x-header-noborder {
+	border-bottom: 2px solid #BFBFBF !important;
+}
+
+.x-panel-header-custom-tabs-collapsed {
+	padding: 16px 12px 16px 12px;
+}
+
+.x-tab-bar-custom-tabs-top {
+	top: 1px !important;
+	z-index: 1 !important;
+}
+
+.x-tab-bar-custom-tabs .x-box-inner {
+	left: 4px;
+}
+
+.x-panel-body-custom-tabs {
+	border-top: 1px solid $border-color !important;
+}
+
+.custom-tabs-body-border .x-panel-body-custom-tabs {
+	border: 1px solid $border-color !important;
+}
+
+.x-tab-focus.x-tab-custom-tabs,
+.x-tab-over.x-tab-custom-tabs,
+.x-tab.x-tab-active.x-tab-custom-tabs {
+	border-top: 2px solid $yellow !important;
+	border-bottom-color: $white !important;
+	background-color: white;
+}
+
+.x-tab.x-tab-disabled.x-tab-custom-tabs {
+	border-bottom-color: $border-color !important;
+}
+
+.x-tab-bar-horizontal > .x-tab-bar-body-custom-tabs {
+	min-height: 45px;
+}
+
+.x-tab-bar-plain.x-tab-bar-custom-tabs-top > .x-tab-bar-body-custom-tabs {
+	padding: 4px 0 0;
+}
+
+.x-tab-custom-tabs.selected-panel {
+	border: 1px dashed $red !important;
+}
+
+//----------------------------------------------
+// Overrides - PANEL
+//----------------------------------------------
+
+.x-grid-td {
+	height: inherit;
+}
+
+.x-grid-cell-inner {
+	height: 100%;
+}
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------
+
+.gray-border .x-panel-default-outer-border-rbl,
+.gray-border .x-panel-default-outer-border-trl,
+.gray-border .x-panel-default-outer-border-rl,
+.gray-border .x-panel-default-outer-border-tbl,
+.gray-border .x-panel-default-outer-border-trb,
+.gray-border .x-panel-default-outer-border-trbl {
+	border-color: #d0d0d0 !important;
+}

@@ -1,0 +1,46 @@
+
+// -------------------------------------
+// Scheduling tasks
+// -------------------------------------
+
+// TODO: find a way to make these "include"s work from scss outside this folder
+
+@include extjs-display-field-ui(
+	$ui: 'time-off-request-display-field',
+
+	$ui-field-height: 30px,
+	$ui-font-weight: 600
+);
+
+@include extjs-label-ui(
+	$ui: 'time-off-request-display-field',
+
+	$ui-height: 30px
+);
+
+@include extjs-display-field-ui(
+	$ui: 'shift-swap-display-field',
+
+	$ui-field-height: 30px,
+	$ui-font-weight: 600
+);
+
+@include extjs-label-ui(
+	$ui: 'shift-swap-display-field',
+
+	$ui-height: 30px
+);
+
+@include extjs-display-field-ui(
+	$ui: 'schedule-change-task-display-field',
+
+	$ui-field-height: 30px,
+	$ui-line-height: 22px,
+	$ui-font-weight: 600
+);
+
+@include extjs-label-ui(
+	$ui: 'schedule-change-task-display-field',
+
+	$ui-height: 30px
+);

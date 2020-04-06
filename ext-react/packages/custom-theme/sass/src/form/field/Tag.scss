@@ -1,0 +1,18 @@
+//----------------------------------------------
+// Overrides
+//----------------------------------------------
+
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------
+
+.custom-tag-field .x-tagfield-item {
+	background-color: $light-blue !important;
+	border: 1px solid $blue !important;
+}
+
+.custom-tag-field .x-tagfield-item:hover {
+	background-color: #d9eaff !important;
+	border: 1px solid $blue !important;
+}

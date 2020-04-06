@@ -1,0 +1,118 @@
+@import 'theme_vars';
+
+// ---------------------------------------------
+// CSS Classes for colors
+//----------------------------------------------
+
+// Primary
+.dark-blue {
+	color: $dark-blue !important;
+}
+.blue {
+	color: $blue !important;
+}
+.grey-dark {
+	color: $grey-dark !important;
+}
+.grey-light {
+	color: $grey-light !important;
+}
+.black {
+	color: $black !important;
+}
+.white {
+	color: $white !important;
+}
+// Secondary
+.grey-medium {
+	color: $grey-medium !important;
+}
+.light-blue {
+	color: $light-blue !important;
+}
+.navy-blue {
+	color: $navy-blue !important;
+}
+.light-green {
+	color: $light-green !important;
+}
+.green {
+	color: $green !important;
+}
+.yellow {
+	color: $yellow !important;
+}
+.orange {
+	color: $orange !important;
+}
+.red {
+	color: $red !important;
+}
+.transparent {
+	color: transparent !important;
+}
+
+// ---------------------------------------------
+// CSS Classes for background colors
+//----------------------------------------------
+
+// Primary
+.dark-blue-background {
+	background-color: $dark-blue !important;
+}
+.blue-background {
+	background-color: $blue !important;
+}
+.grey-dark-background {
+	background-color: $grey-dark !important;
+}
+.grey-light-background {
+	background-color: $grey-light !important;
+}
+.black-background {
+	background-color: $black !important;
+}
+.white-background {
+	background-color: $white !important;
+}
+// Secondary
+.grey-medium-background {
+	background-color: $grey-medium !important;
+}
+.light-blue-background {
+	background-color: $light-blue !important;
+}
+.navy-blue-background {
+	background-color: $navy-blue !important;
+}
+.light-green-background {
+	background-color: $light-green !important;
+}
+.green-background {
+	background-color: $green !important;
+}
+.yellow-background {
+	background-color: $yellow !important;
+}
+.orange-background {
+	background-color: $orange !important;
+}
+.red-background {
+	background-color: $red !important;
+}
+.transparent-background {
+	background-color: transparent !important;
+}
+
+// ---------------------------------------------
+// ATG Custom Colors
+//----------------------------------------------
+
+.text-color {
+	color: $text-color !important;
+}
+
+.main-background-color {
+	background-color: $grey-medium !important;
+	background: $grey-medium !important;
+}

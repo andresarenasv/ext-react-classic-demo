@@ -1,0 +1,31 @@
+//----------------------------------------------
+// Override
+//----------------------------------------------
+
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------
+
+.top-toolbar {
+	border-width: 0 0 1px 0 !important;
+	border-color: $border-color !important;
+}
+
+.bottom-toolbar {
+	border-width: 1px 0 0 0 !important;
+	border-color: $border-color !important;
+}
+
+.main-search-toolbar {
+	background-color: $grey-light !important;
+}
+
+.shrink-toolbar.x-toolbar-default,
+.shrink-toolbar.x-toolbar-footer {
+	padding: 4px 0 4px 4px;
+}
+
+.tab-panel-tab-bar {
+	top: -2px !important;
+}

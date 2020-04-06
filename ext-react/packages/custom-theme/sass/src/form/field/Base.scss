@@ -1,0 +1,32 @@
+//----------------------------------------------
+// Overrides
+//----------------------------------------------
+
+.x-fieldset .x-form-text-default,
+.x-fieldset .x-form-trigger-default {
+	background-color: #fff;
+}
+
+//----------------------------------------------
+// Custom
+//----------------------------------------------
+
+.no-background-color .x-form-trigger,
+.no-background-color .x-form-text-default {
+	background-color: transparent !important;
+}
+
+.white-background-color .x-form-trigger,
+.white-background-color .x-form-text-default {
+	background-color: #fff !important;
+}
+
+.hyperlink .x-form-display-field-default {
+	color: -webkit-link !important;
+	cursor: pointer !important;
+	width: fit-content !important;
+}
+
+.hyperlink .x-form-display-field-default:hover {
+	text-decoration: underline !important;
+}

@@ -1,0 +1,12 @@
+iframe {
+	border: none !important;
+}
+
+body > .x-mask {
+	background-image: none !important;
+	background-color: rgba(0, 0, 0, .3) !important;
+}
+
+.x-keyboard-mode .x-tab-focus {
+	outline: none !important;
+}
