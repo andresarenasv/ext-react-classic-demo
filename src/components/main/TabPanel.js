@@ -61,6 +61,11 @@ class MyTabPanel extends Component {
         //   }
         // }}
         // -------------------
+
+        // ISSUE #14-4: returning false doesn't prevent the tab change from happening.
+        onBeforetabchange={() => {
+          return false;
+        }}
       >
         <Grid 
           tabConfig={{

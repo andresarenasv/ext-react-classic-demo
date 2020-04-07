@@ -55,6 +55,8 @@ listed here:
 	This is supported in ExtJS and it's very useful to show tooltips in disabled elements. If you check the "A Logout Here!"
 	tab in the app, you can see there's a disabled button that displays a tooltip (pointerElements = 'all' works for the button).
 
+	14-4) Returning false in the onBeforetabchange event doesn't prevent the tab from changing.
+
 15) Very similar to #9 (but not the same):
 
 	15-1) Ext Container elements do not append children in the correct order using the React way IF the conditionals of the
