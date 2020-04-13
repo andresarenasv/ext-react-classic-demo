@@ -17,8 +17,7 @@ module.exports = {
 	},
 	plugins: ['react'],
 	globals: {
-		'Ext': true,
-		'Globals': true
+		Ext: "readonly"
 	},
 	rules: {
 		// You can do your customizations here...

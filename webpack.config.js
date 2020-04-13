@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
 const portFinder = require('portfinder');
 
 module.exports = function (env) {
@@ -27,24 +26,6 @@ module.exports = function (env) {
   .then(port => {
     const plugins = [
       new HtmlWebpackPlugin({ template: 'index.html', hash: true, inject: 'body' }),
-      new ExtWebpackPlugin({
-        framework: 'react',
-        toolkit: toolkit,
-        theme: `custom-theme`,
-        packages: [
-          'ux',
-          'charts'
-        ],
-        script: '',
-        emit: 'yes',
-        port: port,
-        profile: '',
-        environment: environment,
-        treeshake: isProd ? 'yes' : 'no',
-        browser: isProd ? 'no' : 'yes',
-        watch: isProd ? 'no' : 'yes',
-        verbose: 'no',
-      })
     ];
 
     return {

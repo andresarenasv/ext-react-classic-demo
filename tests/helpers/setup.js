@@ -3,6 +3,8 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
+window.HTMLCanvasElement.prototype.getContext = () => {};
+
 // Define global variable "Ext" for tests
 /* TEST JEST
 global.Ext = {
