@@ -1,5 +1,13 @@
+HTMLCanvasElement.prototype.getContext = () => { 
+  // return whatever getContext has to return
+};
+
+import '@sencha/ext-classic-enterprise-engine';
+import '@sencha/ext-classic-enterprise-triton';
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+
+
 
 configure({ adapter: new Adapter() });
 

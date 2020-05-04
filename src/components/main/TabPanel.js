@@ -3,6 +3,7 @@ import {ExtPanel, ExtGrid, ExtContainer, ExtToolbar, ExtButton, ExtTbseparator, 
 import Grid from '../grid/Grid';
 import Form from '../form/Form';
 import LogoutButton from '../logout-button/LogoutButton';
+import SimpleComponent from '../simpleComponent/SimpleComponent';
 
 class MyTabPanel extends Component {
 
@@ -101,7 +102,9 @@ class MyTabPanel extends Component {
             tooltip: 'It works!'
           }}
           padding='20'
-        />
+        >
+          <SimpleComponent />
+        </ExtPanel>
         <ExtPanel
           tabConfig={{
             title: `Tooltip Test #2`,

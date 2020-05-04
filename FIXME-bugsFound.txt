@@ -42,11 +42,25 @@ Is there a way to preload the Ext runtime/engine and the components in order to 
 
 In order to test this just make sure you have previously installed Jest and type in terminal: $ jest
 
+[UPDATE USING THE PRECOMPILED EXT RUNTIME]
+
+Using the "@sencha/ext-classic-enterprise-engine" package for Jest, we no longer need to mock the Ext runtime, but we are still getting
+two errors:
+
+	1. Error: Not implemented: HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)
+	2. Warning: React.createElement: type is invalid -- expected a string (for built-in components) or a class/function
+	   (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined
+	   in, or you might have mixed up default and named imports.
+
+The first one comes from the "@sencha/ext-classic-enterprise-engine" package. This seems to happen because there no actual DOM.
+The second error seems that it happens because of the way ExtReact components are exported. It doesn't look like it's using a standard
+JS export so the components are not found. 
+
 
 14) TAB PANELS: Look for the "src\components\main\TabPanel.js" file. That file contains the code and the notes with the issues
 listed here:
 
-	14-1) The activeTab config doesn't work. The activeTab needs to be set programmatically.
+	* 14-1) The activeTab config doesn't work. The activeTab needs to be set programmatically.	[* SOLVED: activeTab works if children are passed in the "items" config]
 
 	14-2) The tabBar config doesn't support JSX elements. It would be great to add support to JSX components to the tabBar
 	config. In this case, I created a mock "logout" button that could be used in other components as well.
@@ -55,7 +69,7 @@ listed here:
 	This is supported in ExtJS and it's very useful to show tooltips in disabled elements. If you check the "A Logout Here!"
 	tab in the app, you can see there's a disabled button that displays a tooltip (pointerElements = 'all' works for the button).
 
-	14-4) Returning false in the onBeforetabchange event doesn't prevent the tab from changing.
+	* 14-4) Returning false in the onBeforetabchange event doesn't prevent the tab from changing.	[* SOLVED: use listeners object instead]
 
 15) Very similar to #9 (but not the same):
 
