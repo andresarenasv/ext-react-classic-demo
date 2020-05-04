@@ -52,9 +52,14 @@ two errors:
 	   (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined
 	   in, or you might have mixed up default and named imports.
 
-The first one comes from the "@sencha/ext-classic-enterprise-engine" package. This seems to happen because there no actual DOM.
+The first error comes from the "@sencha/ext-classic-enterprise-engine" package. This seems to happen because there no actual DOM and something
+in that package is calling "HTMLCanvasElement.prototype.getContext".
 The second error seems that it happens because of the way ExtReact components are exported. It doesn't look like it's using a standard
 JS export so the components are not found. 
+
+You can get these errors when running "npm -t" from the terminal. Jest is only running one simple test located in
+src/components/simpleComponent/SimpleComponent.test.js. That component only has one ExtButton.
+
 
 
 14) TAB PANELS: Look for the "src\components\main\TabPanel.js" file. That file contains the code and the notes with the issues
