@@ -20,6 +20,12 @@ export default class App extends Component {
   // Lifecycle Methods
   // ---------------------------------
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ change: true });
+    }, 3000);
+  }
+
   //-----------------------------------
   // Handlers
   //-----------------------------------
@@ -38,9 +44,9 @@ export default class App extends Component {
         layout = 'fit'
         viewport = {true}
       >
-        {/* {change && <Card/>}
-        {!change && <Form/>} */}
-        <MyTabPanel />
+        {change && <Card/>}
+        {!change && <Form/>}
+        {/* <MyTabPanel /> */}
       </ExtContainer>
     )
   }
